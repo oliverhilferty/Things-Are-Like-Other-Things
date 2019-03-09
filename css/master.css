@@ -4,16 +4,60 @@
     font-family: "Libre Baskerville", serif;
     font-style: italic;
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100vh;
 }
 
 body {
     background-color: #ecebea;
     color: #565656;
+    padding: 1rem;
+    display: grid;
+    place-items: center;
+}
+
+.header {
+    position: absolute;
+}
+
+.subheader {
+    color: #7e7e7e;
+    margin-top: 0.5rem;
+}
+
+.wrapper {
+    display: inline-block;
+}
+
+.amountInput {
+    height: 38px;
+    padding: 0 1rem;
+    color: #565656;
+    background: none;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    font-size: 1rem;
+}
+
+.amountInput:focus {
+    outline: none;
+}
+
+.amountInput::placeholder {
+    color: #7e7e7e;
+}
+
+.custom-select {
+    display: inline-block;
 }
 
 .btn {
     border: 1px solid #565656;
     display: inline-block;
-    padding: 10px 20px;
+    padding: 8px 16px;
     cursor: pointer;
 }
