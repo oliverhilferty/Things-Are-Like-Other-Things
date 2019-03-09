@@ -5,6 +5,11 @@
     font-style: italic;
 }
 
+body {
+    background-color: #ecebea;
+    color: #565656;
+}
+
 .select-header {
 
 }
