@@ -2,7 +2,7 @@
 
 export const impOunces = volume => volume / 35.195;
 export const impPints = volume => volume / 1.76;
-export const millilires = volume => volume / 1000;
+export const millilitres = volume => volume / 1000;
 
 export const units = [
     {
