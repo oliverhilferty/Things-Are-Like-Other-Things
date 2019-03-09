@@ -38,5 +38,7 @@ const convert = (measurement, unit, unitType) => {
 
 const button = document.querySelector(".calculate");
 button.addEventListener("click", () => {
-    console.log(convert(getAmount(), getUnit(), getUnitType()));
+    let converterMessage = convert(getAmount(), getUnit(), getUnitType());
+    console.log(converterMessage);
+    document.querySelector(".converter-message").innerHTML = converterMessage;
 });

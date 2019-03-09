@@ -33,7 +33,16 @@ body {
     display: inline-block;
 }
 
-.amountInput {
+.controls-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.controls-wrapper > * {
+    margin: 0.25rem;
+}
+
+.amount-input {
     height: 38px;
     padding: 0 1rem;
     color: #565656;
@@ -43,11 +52,11 @@ body {
     font-size: 1rem;
 }
 
-.amountInput:focus {
+.amount-input:focus {
     outline: none;
 }
 
-.amountInput::placeholder {
+.amount-input::placeholder {
     color: #7e7e7e;
 }
 
@@ -60,4 +69,10 @@ body {
     display: inline-block;
     padding: 8px 16px;
     cursor: pointer;
+}
+
+.converter-message {
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 2rem;
 }
