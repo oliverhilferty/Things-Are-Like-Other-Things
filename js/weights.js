@@ -1,8 +1,8 @@
 // Weights are given in Kilograms (KG)
 
-export const pounds = weight => weight * 2.205;
-export const tonnes = weight => weight / 1000;
-export const stone = weight => weight / 6.35;
+export const pounds = weight => weight / 2.205;
+export const tonnes = weight => weight * 1000;
+export const stone = weight => weight * 6.35;
 
 export const units = [
     {
