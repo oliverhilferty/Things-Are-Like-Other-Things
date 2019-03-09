@@ -1,5 +1,2 @@
-import {weights, pounds} from "./weights.js";
-import {volumes} from "./volumes.js";
-
-console.log(weights);
-console.log(pounds(1));
+import * as weights from "./weights.js";
+import * as volumes from "./volumes.js";
