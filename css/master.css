@@ -3,6 +3,7 @@
 * {
     font-family: "Libre Baskerville", serif;
     font-style: italic;
+    box-sizing: border-box;
 }
 
 body {
@@ -10,6 +11,9 @@ body {
     color: #565656;
 }
 
-.select-header {
-
+.btn {
+    border: 1px solid #565656;
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
 }
