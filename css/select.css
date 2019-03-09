@@ -9,6 +9,7 @@
 
 .select-selected {
     background-color: #ecebea;
+    height: 38px;
 }
 
 /* Style the arrow inside the select element: */
