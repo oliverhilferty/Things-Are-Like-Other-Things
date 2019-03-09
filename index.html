@@ -14,26 +14,28 @@
         <div class="subheader">The only scientifically important measurement comparison engine</div>
     </div>
 
-    <input type="text">
-    
-    <div class="custom-select" style="width:300px;">
-        <select>
-            <option value="0">Select Unit</option>
-            <option value="weight" disabled class="select-header">Weight</option>
-            <option value="tonnes">Tonnes </option>
-            <option value="pounds">Pounds (lbs)</option>
-            <option value="volume" disabled class="select-header">Volume</option>
-            <option value="impOunces">Imperial Ounces (fl oz)</option>
-            <option value="impPints">Imperial Pints (pt)</option>
-            <option value="impGallons">Imperial Gallons</option>
-            <option value="millilitres">Millilitres (ml)</option>
-            <option value="distance" disabled class="select-header">Distance</option>
-            <option value="metres">Metres (m)</option>
-            <option value="inches">Inches (in)</option>
-        </select>
-    </div>
+    <div class="wrapper">
+        <input type="text" placeholder="420" class="amountInput">
+        
+        <div class="custom-select" style="width:300px;">
+            <select>
+                <option value="0">Select Unit</option>
+                <option value="weight" disabled class="select-header">Weight</option>
+                <option value="tonnes">Tonnes </option>
+                <option value="pounds">Pounds (lbs)</option>
+                <option value="volume" disabled class="select-header">Volume</option>
+                <option value="impOunces">Imperial Ounces (fl oz)</option>
+                <option value="impPints">Imperial Pints (pt)</option>
+                <option value="impGallons">Imperial Gallons</option>
+                <option value="millilitres">Millilitres (ml)</option>
+                <option value="distance" disabled class="select-header">Distance</option>
+                <option value="metres">Metres (m)</option>
+                <option value="inches">Inches (in)</option>
+            </select>
+        </div>
 
-    <div class="btn calculate">Calculate</div>
+        <div class="btn calculate">Calculate</div>
+    </div>
 
     <script src="/js/select.js"></script>
     <script src="/js/weights.js" type="module"></script>
