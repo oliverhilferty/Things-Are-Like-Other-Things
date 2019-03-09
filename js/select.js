@@ -11,6 +11,7 @@ for (i = 0; i < x.length; i++) {
     /* For each element, create a new DIV that will contain the option list: */
     b = document.createElement("DIV");
     b.setAttribute("class", "select-items select-hide");
+    let dataType;
     for (j = 1; j < selElmnt.length; j++) {
         /* For each option in the original select element,
         create a new DIV that will act as an option item: */
@@ -19,7 +20,9 @@ for (i = 0; i < x.length; i++) {
         let isHeader = selElmnt.options[j].classList.contains("select-header");
         if (isHeader) {
             c.classList.add("select-header");
+            dataType = selElmnt.options[j].value;
         } else {
+            c.dataset.type = dataType;
             c.addEventListener("click", function(e) {
                 /* When an item is clicked, update the original select box,
                 and the selected item: */
