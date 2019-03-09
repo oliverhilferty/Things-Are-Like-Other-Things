@@ -14,4 +14,9 @@ export const units = [
         desc: "A Toyota Prius",
         val: 1530
     },
+    {
+        unit: "iPhone X's",
+        desc: "An iPhone X",
+        val: 0.174
+    }
 ];
