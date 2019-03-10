@@ -2,8 +2,11 @@
 export const baseUnit = "metres (m)";
 
 export const metres = distance => distance;
+export const centimetre = distance => distance / 100;
+export const millimetres = distance => distance / 1000;
 export const kilometres = distance => distance * 1000;
 export const inches = distance => distance / 39.37;
+export const miles = distance => distance * 1609.344;
 
 export const units = [
     {
