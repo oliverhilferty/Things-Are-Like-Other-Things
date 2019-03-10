@@ -1,6 +1,7 @@
 import * as weights from "./weights.js";
 import * as volumes from "./volumes.js";
 import * as distances from "./distances.js";
+import * as prices from "./prices.js";
 
 const getAmount = () => document.querySelector("input").value;
 const getUnit = () => document.querySelector("select").value;
@@ -10,6 +11,7 @@ const getUnitType = () => document.querySelector(".same-as-selected").dataset.ty
 const standardiseWeight = (weight, unit) => weights[unit](weight);
 const standardiseVolume = (volume, unit) => volumes[unit](volume);
 const standardiseDistance = (volume, unit) => distances[unit](volume);
+const standardisePrice = (price, unit) => prices[unit](price);
 
 const convert = (measurement, unit, unitType) => {
     let standardisedMeasurement, units;
@@ -26,14 +28,17 @@ const convert = (measurement, unit, unitType) => {
             standardisedMeasurement = standardiseDistance(measurement, unit);
             units = distances.units;
             break;
+        case "money":
+            standardisedMeasurement = standardisePrice(measurement, unit);
+            units = prices.units;
+            break;
     }
 
     let randomUnit = units[Math.floor(Math.random() * units.length)];
 
     console.log(standardisedMeasurement);
     console.log(randomUnit);
-    const message = `${measurement} ${unit} is approximately equal to ${(standardisedMeasurement / randomUnit.val).toFixed(2)} ${randomUnit.unit}`;
-    return message;
+    return `${measurement} ${unit} is approximately equal to ${(standardisedMeasurement / randomUnit.val).toFixed(2)} ${randomUnit.unit}`;
 };
 
 const button = document.querySelector(".calculate");
