@@ -1,4 +1,5 @@
 // Distances are given in metres (m)
+export const baseUnit = "metres (m)";
 
 export const metres = distance => distance;
 export const kilometres = distance => distance * 1000;

@@ -15,22 +15,27 @@ const standardisePrice = (price, unit) => prices[unit](price);
 
 const convert = (measurement, unit, unitType) => {
     let standardisedMeasurement, units;
+    let baseUnit;
     switch (unitType) {
         case "weight":
             standardisedMeasurement = standardiseWeight(measurement, unit);
             units = weights.units;
+            baseUnit = weights.baseUnit;
             break;
         case "volume":
             standardisedMeasurement = standardiseVolume(measurement, unit);
             units = volumes.units;
+            baseUnit = volumes.baseUnit;
             break;
         case "distance":
             standardisedMeasurement = standardiseDistance(measurement, unit);
             units = distances.units;
+            baseUnit = distances.baseUnit;
             break;
         case "money":
             standardisedMeasurement = standardisePrice(measurement, unit);
             units = prices.units;
+            baseUnit = prices.baseUnit;
             break;
     }
 
@@ -38,14 +43,19 @@ const convert = (measurement, unit, unitType) => {
 
     console.log(standardisedMeasurement);
     console.log(randomUnit);
-    return `${measurement} ${unit} is approximately equal to ${(standardisedMeasurement / randomUnit.val).toFixed(2)} ${randomUnit.unit}`;
+    return {
+        convertedMessage: `${measurement} ${unit} is approximately equal to ${(standardisedMeasurement / randomUnit.val).toFixed(2)} ${randomUnit.unit}`,
+        descriptionMessage: `${randomUnit.desc} is ${randomUnit.val} ${baseUnit}`
+    }
+
 };
 
 const button = document.querySelector(".calculate");
 button.addEventListener("click", () => {
     const converterMessageElement = document.querySelector(".converter-message");
-    let converterMessage = convert(getAmount(), getUnit(), getUnitType());
-    console.log(converterMessage);
-    converterMessageElement.innerHTML = converterMessage;
+    let converter = convert(getAmount(), getUnit(), getUnitType());
+    console.log(converter.convertedMessage);
+    converterMessageElement.innerHTML = converter.convertedMessage;
     converterMessageElement.classList.remove("faded");
+    document.querySelector(".desc-message").innerHTML = converter.descriptionMessage;
 });

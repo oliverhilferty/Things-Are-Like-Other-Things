@@ -1,4 +1,5 @@
 // Volumes are given in Litres (L)
+export const baseUnit = "litres (L)"
 
 export const impOunces = volume => volume / 35.195;
 export const impPints = volume => volume / 1.76;

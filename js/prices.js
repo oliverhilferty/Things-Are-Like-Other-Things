@@ -1,4 +1,5 @@
 // Prices are given in Pounds (£)
+export const baseUnit = "GBP (£)";
 
 export const pounds = price => price;
 

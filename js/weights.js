@@ -1,4 +1,5 @@
 // Weights are given in Kilograms (KG)
+export const baseUnit = "kilograms (KG)"
 
 export const pounds = weight => weight / 2.205;
 export const tonnes = weight => weight * 1000;
