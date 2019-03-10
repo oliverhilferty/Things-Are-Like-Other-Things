@@ -19,5 +19,10 @@ export const units = [
         unit: "men's size 10 shoes",
         desc: "A men's UK size 10 shoe",
         val: 0.28
+    },
+    {
+        unit: "basketball free throws",
+        desc: "A free throw in NBA basketball",
+        val: 4.57
     }
 ];
