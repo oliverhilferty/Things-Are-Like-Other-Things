@@ -14,5 +14,10 @@ export const units = [
         unit: "Golden Gate Bridges",
         desc: "The Golden Gate Bridge",
         val: 2737
+    },
+    {
+        unit: "men's size 10 shoes",
+        desc: "A men's UK size 10 shoe",
+        val: 0.28
     }
 ];
